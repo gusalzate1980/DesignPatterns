@@ -2,4 +2,5 @@
 
 //Decorator.ExecuteDecorator();
 //ChainResponsability.ExecuteChainResponsability();
-Adapter.ExecuteAdapter();
+//Adapter.ExecuteAdapter();
+Composite.ExecuteComposite();
