@@ -1,4 +1,5 @@
 ﻿using Patrones;
+using Patrones.Comportamiento;
 using Patrones.Creacional;
 using Patrones.Estructural;
 
@@ -7,5 +8,6 @@ using Patrones.Estructural;
 //Adapter.ExecuteAdapter();
 //Composite.ExecuteComposite();
 
-IDesignPattern pattern = new AbstractFactory();
+//IDesignPattern pattern = new AbstractFactory();
+IDesignPattern pattern = new Command();
 pattern.ExecutePattern();
