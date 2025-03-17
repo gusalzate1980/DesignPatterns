@@ -1,6 +1,11 @@
-﻿using Patrones.Estructural;
+﻿using Patrones;
+using Patrones.Creacional;
+using Patrones.Estructural;
 
 //Decorator.ExecuteDecorator();
 //ChainResponsability.ExecuteChainResponsability();
 //Adapter.ExecuteAdapter();
-Composite.ExecuteComposite();
+//Composite.ExecuteComposite();
+
+IDesignPattern pattern = new AbstractFactory();
+pattern.ExecutePattern();
