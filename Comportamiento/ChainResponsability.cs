@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patrones.Estructural
+namespace Patrones.Comportamiento
 {
     public static class ChainResponsability
     {
         public static void ExecuteChainResponsability()
         {
             IValidarLogin login = new ValidarLoginCredenciales(new ValidarLoginClientePago(new ValidarLoginUsuariosConectados()));
-            Console.WriteLine("Pudo Acceder ?: "+(login.UsuarioPuedeAcceder("gusalzate1980@gmail.com", "123")  ? "Si":"Nop"));
+            Console.WriteLine("Pudo Acceder ?: " + (login.UsuarioPuedeAcceder("gusalzate1980@gmail.com", "123") ? "Si" : "Nop"));
         }
     }
 
@@ -23,7 +23,7 @@ namespace Patrones.Estructural
     public class ValidarLoginCredenciales : IValidarLogin
     {
         public IValidarLogin next;
-        public ValidarLoginCredenciales(IValidarLogin pNext) 
+        public ValidarLoginCredenciales(IValidarLogin pNext)
         {
             next = pNext;
         }
@@ -64,7 +64,7 @@ namespace Patrones.Estructural
         {
             int usuariosConectados = 4;
             int usuairosPermitidos = 5;
-            if (usuariosConectados< usuairosPermitidos)
+            if (usuariosConectados < usuairosPermitidos)
             {
                 return true;
             }
