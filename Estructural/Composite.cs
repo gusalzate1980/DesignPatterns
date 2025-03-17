@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Patrones.Estructural
 {
-    public static class Composite
+    public class Composite :IDesignPattern
     {
-        public static void ExecuteComposite() 
+        public void ExecutePattern() 
         {
             Funda f1 = new Funda(5000);
             Funda f2 = new Funda(6000);

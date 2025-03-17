@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Patrones.Estructural
 {
-    public static class Decorator
+    public class Decorator:IDesignPattern
     {
-        public static void ExecuteDecorator()
+        public void ExecutePattern()
         {
             IClienteReportado reportado = new ClienteReportadoDataCredito();
             reportado = new DecoratorTransUnion(reportado);

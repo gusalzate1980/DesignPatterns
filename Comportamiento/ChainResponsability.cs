@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Patrones.Comportamiento
 {
-    public static class ChainResponsability
+    public class ChainResponsability:IDesignPattern
     {
-        public static void ExecuteChainResponsability()
+        public void ExecutePattern()
         {
             IValidarLogin login = new ValidarLoginCredenciales(new ValidarLoginClientePago(new ValidarLoginUsuariosConectados()));
             Console.WriteLine("Pudo Acceder ?: " + (login.UsuarioPuedeAcceder("gusalzate1980@gmail.com", "123") ? "Si" : "Nop"));

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Patrones.Estructural
 {
-    public static class Adapter
+    public class Adapter:IDesignPattern
     {
-        public static void ExecuteAdapter()
+        public void ExecutePattern()
         { 
             Asterisk asterisk = new Asterisk();
             Plivo plivo = new Plivo();
